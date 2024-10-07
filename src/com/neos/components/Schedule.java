@@ -22,15 +22,15 @@ public class Schedule {
     }
 
     // Phương thức hiển thị thông tin lộ trình
-    public String showInfo() {
-        return "Mã xe: " + carId + "\n" +
-                "Biển số xe: " + number + "\n" +
-                "Mã tài khoản: " + userId + "\n" +
-                "Họ tên người dùng: " + userName + "\n" +
-                "Vị trí đầu: " + startPos + "\n" +
-                "Vị trí cuối: " + destPos + "\n" +
-                "Số km: " + kmTotal + "\n" +
-                "Chi phí: " + cost;
+    public void showInfo() {
+        System.out.println("Mã xe: " + carId);
+        System.out.println("Biển số xe: " + number);
+        System.out.println("Mã tài khoản: " + userId);
+        System.out.println("Họ tên người dùng: " + userName);
+        System.out.println("Vị trí đầu: " + startPos);
+        System.out.println("Vị trí cuối: " + destPos);
+        System.out.println("Số km: " + kmTotal);
+        System.out.println("Chi phí: " + cost);
     }
 
     // các phương thức get

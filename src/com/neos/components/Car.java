@@ -26,17 +26,17 @@ public class Car {
     }
 
     // phương thức hiển thị thông tin
-    public String showInfo() {
-        return "Mã xe: " + carId + "\n" +
-                "Tên lá xe: " + name + "\n" +
-                "Biển số xe: " + number + "\n" +
-                "Hãng xe: " + term + "\n" +
-                "Loại xe: " + typePos + "\n" +
-                "Giá cước trên 1 km: " + price + "\n" +
-                "Vị trí hiện tại: " + startPos + "\n" +
-                "Vị trí đích đến: " + destPos + "\n" +
-                "Số km đã đi: " + kmTotal + "\n" +
-                "Thu nhập hiện tại: " + costTotal;
+    public void showInfo() {
+        System.out.println("Mã xe: " + carId);
+        System.out.println("Tên lái xe: " + name);
+        System.out.println("Biển số xe: " + number);
+        System.out.println("Hãng xe: " + term);
+        System.out.println("Loại xe: " + typePos);
+        System.out.println("Giá cước trên 1 km: " + price);
+        System.out.println("Vị trí hiện tại: " + startPos);
+        System.out.println("Vị trí đích đến: " + destPos);
+        System.out.println("Số km đã đi: " + kmTotal);
+        System.out.println("Thu nhập hiện tại: " + costTotal);
     }
 
     // Phương thức hiển thị và trả về thu nhập
@@ -53,11 +53,11 @@ public class Car {
         this.startPos = startPos;
         this.destPos = destPos;
 
-        int km = ( (int) destPos ) - ( (int) startPos);
-        this.kmTotal =+ km;
+        int km = Math.abs( ( (int) destPos ) - ( (int) startPos) );
+        this.kmTotal += km;
 
         int cost = this.price * km;
-        this.costTotal =+ cost;
+        this.costTotal += cost;
 
         System.out.println("Số tiền khách trả của lộ trình: Từ " +  startPos + " đến " + destPos + " là: " + cost);
 

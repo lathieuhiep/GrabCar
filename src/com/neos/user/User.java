@@ -35,12 +35,18 @@ public class User {
    public void findCar(char startPos, char destPos, String typePos) {
         Car car = findAndMoveListener.find(startPos, destPos, typePos);
 
+       System.out.println("=========================");
+
        if (car != null) {
            // in thông tin xe
+           System.out.println("Thông tin tìm kiếm xe");
            car.showInfo();
 
            // in thông tin lộ trình
+           System.out.println();
            Schedule schedule = findAndMoveListener.move(startPos, destPos, car.getCarId(), userName, userId);
+
+           System.out.println("--- Thông tin lộ trình ---");
            schedule.showInfo();
 
            // thêm thông tin lộ trình vào danh sách
@@ -50,11 +56,11 @@ public class User {
 
    // Hiển thị danh sách lộ trình đã đi
     public void showAllSchedule() {
-        System.out.println("Danh sách lộ trình:");
+        System.out.println("--- Danh sách lộ trình ---");
 
         int totalCost = 0;
         for (Schedule schedule : listSchedule) {
-            totalCost =+ schedule.getCost();
+            totalCost += schedule.getCost();
 
             schedule.showInfo();
             System.out.println();
