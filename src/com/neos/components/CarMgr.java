@@ -68,7 +68,7 @@ public class CarMgr implements FindAndMoveListener {
         for (Car car : listCar) {
             if ( car.getTypePos().equals(typePost) ) {
                 // khoảng cách vị trí hiện tại đến xe
-                int distance = Math.abs(startPos - car.getStartPos());
+                int distance = Math.abs(startPos - car.getDestPos());
 
                 if (distance < minDistance) {
                     int cost = distance * car.getPrice();

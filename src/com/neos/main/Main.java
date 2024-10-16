@@ -35,6 +35,7 @@ public class Main {
 
         // tìm kiếm xe
         user1.findCar('A', 'C', "4 chỗ");
+        user1.findCar('A', 'B', "4 chỗ");
 
         // Hiển thị toàn bộ danh sách lộ trình đã đi của người dùng
         user1.showAllSchedule();
